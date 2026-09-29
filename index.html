@@ -1,0 +1,2885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Institucional de Modalidad Combinada (PIMC) 2026 | Instituto Leibnitz</title>
+    <meta name="description" content="Proyecto Institucional de Modalidad Combinada 2026 del Instituto Leibnitz (Villa María, Córdoba). Trayectorias cuidadas en escenarios presenciales y virtuales integrados.">
+    <meta name="theme-color" content="#091124">
+
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proyecto Institucional de Modalidad Combinada (PIMC) 2026 | Instituto Leibnitz">
+    <meta property="og:description" content="Trayectorias cuidadas en escenarios presenciales y virtuales integrados. Instituto Leibnitz, Nivel Superior. Villa María, Córdoba.">
+
+    <!-- Google Fonts: Inter y Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           VARIABLES Y DISEÑO BASE (CSS Variables & Core Styles)
+           ========================================================================== */
+        :root {
+            /* Colores Institucionales */
+            --primary: #091124;         /* Azul Marino Profundo */
+            --primary-dark: #040914;    /* Marino Oscuro */
+            --primary-light: #18233c;   /* Marino Suave */
+            --accent: #d96b27;          /* Naranja de Acento Institucional */
+            --accent-hover: #bd591e;    /* Naranja Oscuro Hover */
+            --accent-light: #fdf5ef;    /* Fondo Naranja Suave */
+            --accent-border: #f7d5c0;   /* Borde Naranja Tenue */
+            --blue-accent: #2563eb;     /* Azul de contraste suave */
+            --blue-soft: #eff6ff;       /* Fondo azul muy tenue */
+            
+            /* Tonos de Fondo y Superficies */
+            --bg-base: #faf9f6;         /* Crema suave institucional (Lino) */
+            --bg-card: #ffffff;         /* Blanco puro para tarjetas */
+            --bg-alt: #f3f5f8;          /* Gris claro corporativo */
+            
+            /* Textos */
+            --text-main: #2d3748;       /* Gris pizarra oscuro */
+            --text-muted: #5a6a85;      /* Gris medio para descripciones */
+            --text-light: #ffffff;      /* Blanco */
+            
+            /* Bordes y Sombras */
+            --border: #e2e8f0;          /* Borde sutil */
+            --border-focus: #cbd5e0;
+            --shadow-sm: 0 2px 4px rgba(9, 17, 36, 0.04);
+            --shadow-md: 0 4px 12px rgba(9, 17, 36, 0.08);
+            --shadow-lg: 0 12px 24px rgba(9, 17, 36, 0.12);
+            
+            /* Fuentes y Dimensiones */
+            --font-headings: 'Lora', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --transition: all 0.28s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --max-width: 1200px;
+            --header-height: 80px;
+        }
+
+        /* Reset general */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--header-height);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Tipografía y encabezados */
+        h1, h2, h3, h4 {
+            font-family: var(--font-headings);
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 58px;
+            height: 4px;
+            background-color: var(--accent);
+            margin-top: 10px;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 5rem 0;
+        }
+
+        .section-desc {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 820px;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 12px 26px;
+            font-size: 0.98rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--text-light);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(217, 107, 39, 0.35);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: var(--text-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-card {
+            background-color: var(--primary);
+            color: var(--text-light);
+            border: 1px solid var(--primary);
+            font-size: 0.92rem;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        .btn-card:hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(217, 107, 39, 0.25);
+        }
+
+        /* ==========================================================================
+           CABECERA Y NAVEGACIÓN FIJA
+           ========================================================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 42px;
+            width: auto;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: var(--font-headings);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-main);
+            padding: 8px 12px;
+            border-radius: 4px;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent);
+            background-color: var(--bg-alt);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 50%;
+        }
+
+        /* Botón Menú Móvil */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 32px;
+            height: 24px;
+            position: relative;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            position: absolute;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .mobile-menu-btn span:nth-child(1) { top: 0; }
+        .mobile-menu-btn span:nth-child(2) { top: 10px; }
+        .mobile-menu-btn span:nth-child(3) { top: 20px; }
+
+        .mobile-menu-btn.open span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        .mobile-menu-btn.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-btn.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* ==========================================================================
+           HERO DE PORTADA
+           ========================================================================== */
+        .hero {
+            position: relative;
+            padding-top: calc(var(--header-height) + 3.8rem);
+            padding-bottom: 5.5rem;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 65%, #151b32 100%);
+            color: var(--text-light);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 82% 18%, rgba(217, 107, 39, 0.18) 0%, transparent 45%),
+                              radial-gradient(circle at 12% 82%, rgba(59, 130, 246, 0.16) 0%, transparent 55%),
+                              radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.045;
+            background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                              linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 32px 32px;
+            z-index: 0;
+        }
+
+        .hero-container {
+            position: relative;
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .hero-content-wrapper {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-text-side {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .hero-badge {
+            align-self: flex-start;
+            background-color: var(--accent);
+            color: var(--text-light);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            box-shadow: 0 4px 12px rgba(217, 107, 39, 0.35);
+        }
+
+        .hero-meta {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-size: 3.1rem;
+            color: var(--text-light);
+            line-height: 1.18;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: #cbd5e1;
+            font-family: var(--font-headings);
+            font-weight: 500;
+        }
+
+        .hero-motto {
+            font-family: var(--font-headings);
+            font-size: 1.55rem;
+            font-style: italic;
+            color: #e2e8f0;
+            border-left: 4px solid var(--accent);
+            padding-left: 1.4rem;
+            margin: 0.8rem 0;
+            line-height: 1.45;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.86);
+            line-height: 1.65;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Hero Columna Derecha: Tarjeta Visual Elegante (70/30) */
+        .hero-visual-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 2.2rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .hero-visual-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent) 0%, #38bdf8 100%);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        .hero-card-tag {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--accent);
+            background: rgba(217, 107, 39, 0.15);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .hero-card-year {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        /* Gráfico Circular SVG Proporción 70/30 */
+        .chart-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0.5rem 0;
+        }
+
+        .donut-chart-svg {
+            width: 150px;
+            height: 150px;
+            transform: rotate(-90deg);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+            flex-shrink: 0;
+        }
+
+        .chart-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-grow: 1;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .stat-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .stat-dot.presencial { background-color: var(--accent); }
+        .stat-dot.virtual { background-color: #38bdf8; }
+
+        .stat-number {
+            font-size: 1.85rem;
+            font-weight: 800;
+            line-height: 1;
+            color: #ffffff;
+            font-family: var(--font-body);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        .stat-sublabel {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* Barra de distribución */
+        .dist-bar-wrapper {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            height: 10px;
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+        }
+
+        .dist-presencial {
+            width: 70%;
+            background: var(--accent);
+            height: 100%;
+        }
+
+        .dist-virtual {
+            width: 30%;
+            background: #38bdf8;
+            height: 100%;
+        }
+
+        .hero-card-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        .hero-card-footer-text {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-card-footer-sub {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* ==========================================================================
+           SECCIÓN 1: PRESENTACIÓN Y FUNDAMENTACIÓN
+           ========================================================================== */
+        .fundamentacion-section {
+            background-color: var(--bg-card);
+        }
+
+        .fundamentacion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .lead-text-box {
+            background-color: var(--bg-alt);
+            border-left: 5px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            padding: 2.2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .lead-text-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .lead-text-box p {
+            font-size: 1.08rem;
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        /* Fila de 4 tarjetas con iconos lineales */
+        .principios-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.8rem;
+        }
+
+        .principio-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 2rem 1.6rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-top: 4px solid var(--primary);
+        }
+
+        .principio-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .principio-icon-wrapper {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .principio-card:hover .principio-icon-wrapper {
+            background-color: var(--accent);
+            color: var(--text-light);
+        }
+
+        .principio-icon-wrapper svg {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .principio-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .principio-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           SECCIÓN 2: ORGANIZACIÓN DE LOS ESCENARIOS
+           ========================================================================== */
+        .organizacion-section {
+            background-color: var(--bg-alt);
+        }
+
+        /* Destacado visual institucional (Callout) */
+        .acuerdo-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--text-light);
+            border-radius: 12px;
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+            box-shadow: var(--shadow-md);
+            border-left: 6px solid var(--accent);
+        }
+
+        .acuerdo-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .acuerdo-tag {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+        }
+
+        .acuerdo-text {
+            font-family: var(--font-headings);
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.35;
+        }
+
+        .acuerdo-badge-pill {
+            background-color: rgba(217, 107, 39, 0.2);
+            border: 1px solid var(--accent);
+            color: #fed7aa;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* Grilla de 3 Escenarios */
+        .escenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .escenario-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 2.4rem 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            border-top: 5px solid var(--primary);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            position: relative;
+        }
+
+        .escenario-card:hover {
+            transform: translateY(-6px);
+            border-top-color: var(--accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .escenario-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .escenario-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background-color: var(--bg-alt);
+            color: var(--primary);
+        }
+
+        .escenario-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .escenario-card:hover .escenario-icon-wrapper {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .escenario-icon-wrapper svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .escenario-title {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .escenario-desc {
+            font-size: 0.98rem;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 0;
+            flex-grow: 1;
+        }
+
+        /* Nota visual breve */
+        .nota-alternancia {
+            background-color: #ffffff;
+            border: 1px dashed var(--accent);
+            border-radius: 8px;
+            padding: 1.2rem 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nota-icon {
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .nota-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        .nota-text {
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* ==========================================================================
+           SECCIÓN 3: AULA VIRTUAL LEIBNITZ
+           ========================================================================== */
+        .aula-section {
+            background-color: var(--bg-card);
+        }
+
+        .aula-intro-box {
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 3rem;
+            align-items: center;
+            background-color: var(--bg-alt);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .aula-intro-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .aula-action-side {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+
+        .aula-action-side .btn {
+            width: 100%;
+        }
+
+        .nodo-badge {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Representación visual de estructura de aula (6 módulos) */
+        .modulos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .modulo-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .modulo-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-border);
+            box-shadow: var(--shadow-md);
+        }
+
+        .modulo-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modulo-number {
+            font-family: var(--font-headings);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            background-color: var(--accent-light);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modulo-icon {
+            color: var(--primary-light);
+        }
+
+        .modulo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .modulo-title {
+            font-size: 1.28rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .modulo-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           SECCIÓN 4: ACUERDOS PARA LA PLANIFICACIÓN DOCENTE
+           ========================================================================== */
+        .planificacion-section {
+            background-color: var(--bg-alt);
+        }
+
+        .planificacion-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 3.5rem;
+            align-items: flex-start;
+        }
+
+        .acuerdos-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .acuerdo-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.4rem 1.6rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .acuerdo-item:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+        }
+
+        .check-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .check-badge svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .acuerdo-item-text {
+            font-size: 1.02rem;
+            font-weight: 500;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        /* Tarjeta lateral destacada */
+        .anticipar-card {
+            background: linear-gradient(145deg, #ffffff 0%, var(--bg-base) 100%);
+            border: 1px solid var(--border);
+            border-top: 6px solid var(--accent);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            position: sticky;
+            top: calc(var(--header-height) + 2rem);
+        }
+
+        .anticipar-tag {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .anticipar-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .anticipar-desc {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        .anticipar-puntos {
+            list-style: none;
+            border-top: 1px solid var(--border);
+            padding-top: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .anticipar-puntos li {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .anticipar-puntos li::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        /* ==========================================================================
+           SECCIÓN 5: EVALUACIÓN FORMATIVA Y ACREDITACIÓN
+           ========================================================================== */
+        .evaluacion-section {
+            background-color: var(--bg-card);
+        }
+
+        .evaluacion-intro-text {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            max-width: 860px;
+            margin-bottom: 3.5rem;
+            line-height: 1.7;
+        }
+
+        .evaluacion-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.8rem;
+        }
+
+        .evaluacion-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 2.2rem 1.8rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .evaluacion-card:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .evaluacion-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background-color: var(--bg-alt);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .evaluacion-card:hover .evaluacion-card-icon {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .evaluacion-card-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .evaluacion-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .evaluacion-card-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           SECCIÓN 6: CICLO PROPEDÉUTICO (BANNER OSCURO)
+           ========================================================================== */
+        .propedéutico-section {
+            background-color: var(--bg-alt);
+            padding: 5rem 0;
+        }
+
+        .propedéutico-banner {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 70%, #151b32 100%);
+            color: var(--text-light);
+            border-radius: 16px;
+            padding: 4.5rem 3.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .propedéutico-banner::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(217, 107, 39, 0.22) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .propedéutico-banner-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                              linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 28px 28px;
+            z-index: 0;
+        }
+
+        .propedéutico-header {
+            position: relative;
+            z-index: 2;
+            max-width: 820px;
+            margin-bottom: 3.5rem;
+        }
+
+        .propedéutico-tag {
+            color: #fed7aa;
+            background-color: rgba(217, 107, 39, 0.25);
+            border: 1px solid var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
+
+        .propedéutico-banner h2 {
+            color: var(--text-light);
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .propedéutico-banner h2::after {
+            background-color: var(--accent);
+        }
+
+        .propedéutico-banner p.propedéutico-bajada {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            font-family: var(--font-headings);
+            font-style: italic;
+        }
+
+        .propedéutico-cards-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.8rem;
+        }
+
+        .propedéutico-card {
+            background-color: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 2.2rem 1.6rem;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .propedéutico-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: rgba(217, 107, 39, 0.6);
+            transform: translateY(-4px);
+        }
+
+        .propedéutico-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: rgba(217, 107, 39, 0.2);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .propedéutico-card-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .propedéutico-card-title {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .propedéutico-card-desc {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.94rem;
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           SECCIÓN 7: CORRESPONSABILIDAD
+           ========================================================================== */
+        .corresponsabilidad-section {
+            background-color: var(--bg-card);
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .rol-card {
+            background-color: var(--bg-alt);
+            border-radius: 10px;
+            padding: 2.2rem 1.4rem;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .rol-card:hover {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow-lg);
+            border-bottom-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .rol-icon {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-card);
+            border-radius: 50%;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .rol-card:hover .rol-icon {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+
+        .rol-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .rol-title {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .rol-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           SECCIÓN 8: SEGUIMIENTO Y ACTUALIZACIÓN ANUAL
+           ========================================================================== */
+        .seguimiento-section {
+            background-color: var(--bg-alt);
+        }
+
+        .seguimiento-intro-text {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            max-width: 860px;
+            margin-bottom: 3.5rem;
+            line-height: 1.7;
+        }
+
+        /* Línea de tiempo visual */
+        .timeline {
+            position: relative;
+            max-width: 980px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 28px;
+            width: 4px;
+            background-color: var(--border);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 14px;
+            top: 4px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--bg-card);
+            border: 3px solid var(--accent);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: var(--shadow-sm);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.6rem 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            border-color: var(--accent-border);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-period {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-desc {
+            font-size: 1.02rem;
+            color: var(--text-main);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* Grilla de Indicadores */
+        .indicadores-block {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 3rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .indicadores-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .indicadores-header h3 {
+            font-size: 1.55rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .indicadores-header p {
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .indicadores-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .indicador-card {
+            background-color: var(--bg-alt);
+            border-radius: 8px;
+            padding: 1.5rem 1.2rem;
+            text-align: center;
+            border-top: 3px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .indicador-card:hover {
+            border-top-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .indicador-icon {
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .indicador-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .indicador-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        /* ==========================================================================
+           SECCIÓN FINAL: RECURSOS
+           ========================================================================== */
+        .recursos-section {
+            background-color: var(--bg-card);
+        }
+
+        .recursos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .recurso-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+            border-top: 4px solid var(--primary);
+        }
+
+        .recurso-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .recurso-card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .recurso-badge {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background-color: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .recurso-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .recurso-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           PIE DE PÁGINA (FOOTER)
+           ========================================================================== */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 4.5rem 0 2.5rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .footer-logo-title {
+            font-family: var(--font-headings);
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .footer-logo-sub {
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 600;
+        }
+
+        .footer-location {
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
+
+        .footer-quote {
+            font-family: var(--font-headings);
+            font-style: italic;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .footer-links-title {
+            font-family: var(--font-headings);
+            font-size: 1.15rem;
+            color: #ffffff;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-nav-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem 1.5rem;
+        }
+
+        .footer-nav-list a {
+            color: #94a3b8;
+            font-size: 0.92rem;
+            transition: var(--transition);
+        }
+
+        .footer-nav-list a:hover {
+            color: var(--text-light);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+
+        .footer-copy {
+            font-size: 0.88rem;
+            color: #94a3b8;
+        }
+
+        .footer-motto-final {
+            font-style: italic;
+            font-size: 0.92rem;
+            color: #fed7aa;
+        }
+
+        /* Modal Placeholder para descarga de documento */
+        .toast-notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: var(--primary);
+            color: #ffffff;
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transform: translateY(120%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .toast-notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* ==========================================================================
+           RESPONSIVIDAD Y CONSULTAS DE MEDIOS
+           ========================================================================== */
+        @media (max-width: 1100px) {
+            .principios-grid,
+            .evaluacion-cards-grid,
+            .propedéutico-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .roles-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .indicadores-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .recursos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2.8rem;
+            }
+
+            .fundamentacion-grid,
+            .planificacion-grid,
+            .aula-intro-box {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .anticipar-card {
+                position: static;
+            }
+
+            .escenarios-grid,
+            .modulos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .acuerdo-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 70px;
+            }
+
+            h2 {
+                font-size: 1.85rem;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-motto {
+                font-size: 1.3rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: var(--header-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                background-color: var(--bg-card);
+                flex-direction: column;
+                padding: 2.5rem 1.8rem;
+                gap: 1.2rem;
+                align-items: flex-start;
+                box-shadow: var(--shadow-lg);
+                transition: var(--transition);
+                overflow-y: auto;
+            }
+
+            .nav-menu.open {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-link {
+                font-size: 1.05rem;
+                width: 100%;
+                padding: 10px 14px;
+            }
+
+            .container {
+                padding: 3.5rem 0;
+            }
+
+            .propedéutico-banner {
+                padding: 3rem 1.8rem;
+            }
+
+            .principios-grid,
+            .evaluacion-cards-grid,
+            .propedéutico-cards-grid,
+            .roles-grid,
+            .indicadores-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .footer-nav-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .timeline::before {
+                left: 18px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+
+            .timeline-marker {
+                left: 4px;
+                width: 28px;
+                height: 28px;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.95rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       CABECERA Y NAVEGACIÓN FIJA
+       ========================================================================== -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#inicio" class="logo-box" aria-label="Instituto Leibnitz - Volver al inicio">
+                <!-- SVG Icon Logo Institucional - Cultura LBZ -->
+                <svg class="logo-icon" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Text: Cultura -->
+                    <text x="5" y="32" 
+                          font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                          font-size="32" 
+                          font-weight="600" 
+                          font-style="italic" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          stroke-width="2.2"
+                          letter-spacing="0.5">Cultura</text>
+                    <!-- Text: LBZ -->
+                    <text x="5" y="78" 
+                          font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                          font-size="52" 
+                          font-weight="900" 
+                          font-style="italic" 
+                          fill="none" 
+                          stroke="var(--accent)" 
+                          stroke-width="3"
+                          letter-spacing="1">LBZ</text>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-title">Instituto Leibnitz</span>
+                    <span class="logo-subtitle">Cerca tuyo. En serio.</span>
+                </div>
+            </a>
+            
+            <nav aria-label="Navegación principal">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#fundamentacion" class="nav-link">Fundamentación</a></li>
+                    <li><a href="#organizacion" class="nav-link">Organización</a></li>
+                    <li><a href="#aulas-virtuales" class="nav-link">Aulas virtuales</a></li>
+                    <li><a href="#evaluacion" class="nav-link">Evaluación</a></li>
+                    <li><a href="#ingreso" class="nav-link">Ingreso</a></li>
+                    <li><a href="#seguimiento" class="nav-link">Seguimiento</a></li>
+                    <li><a href="#recursos" class="nav-link">Recursos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+           HERO DE PORTADA
+           ========================================================================== -->
+        <section class="hero" id="inicio">
+            <div class="hero-pattern"></div>
+            <div class="hero-container">
+                <div class="hero-content-wrapper">
+                    <div class="hero-text-side">
+                        <span class="hero-badge">INSTITUTO LEIBNITZ | NIVEL SUPERIOR</span>
+                        <div class="hero-meta">MODALIDAD COMBINADA 2026</div>
+                        <h1 class="hero-title">Proyecto Institucional de Modalidad Combinada</h1>
+                        <div class="hero-subtitle">Ciclo lectivo 2026</div>
+                        
+                        <blockquote class="hero-motto">
+                            “Trayectorias cuidadas en escenarios presenciales y virtuales integrados”
+                        </blockquote>
+                        
+                        <p class="hero-description">
+                            El Proyecto Institucional de Modalidad Combinada establece los acuerdos que organizan la enseñanza, el aprendizaje, la evaluación y la comunicación institucional en escenarios presenciales, virtuales sincrónicos y virtuales asincrónicos. Su propósito es asegurar propuestas formativas articuladas, accesibles y pedagógicamente significativas para las trayectorias de las y los estudiantes del Instituto Leibnitz.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#fundamentacion" class="btn btn-primary">Conocer el PIMC</a>
+                            <a href="#organizacion" class="btn btn-outline">Ver acuerdos institucionales</a>
+                        </div>
+                    </div>
+
+                    <!-- Columna derecha: Tarjeta Visual Elegante (70% Presencial / 30% Virtual) -->
+                    <div class="hero-visual-side">
+                        <div class="hero-visual-card" role="region" aria-label="Distribución horaria de la modalidad combinada">
+                            <div class="hero-card-header">
+                                <span class="hero-card-tag">Estructura Curricular</span>
+                                <span class="hero-card-year">Ciclo 2026</span>
+                            </div>
+
+                            <div class="chart-container">
+                                <!-- Gráfico SVG Donut Accesible: 70% naranja (#d96b27), 30% azul celeste (#38bdf8) -->
+                                <svg class="donut-chart-svg" viewBox="0 0 42 42" role="img" aria-label="Gráfico de proporción horaria: 70% presencial y 30% virtual">
+                                    <circle class="donut-bg" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="rgba(255,255,255,0.12)" stroke-width="5.5"></circle>
+                                    <!-- Segmento 70% Presencial (offset 0, longitud 70) -->
+                                    <circle class="donut-segment presencial-seg" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="var(--accent)" stroke-width="5.5" stroke-dasharray="70 30" stroke-dashoffset="0"></circle>
+                                    <!-- Segmento 30% Virtual (offset 30, longitud 30) -->
+                                    <circle class="donut-segment virtual-seg" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#38bdf8" stroke-width="5.5" stroke-dasharray="30 70" stroke-dashoffset="-70"></circle>
+                                </svg>
+
+                                <div class="chart-legend">
+                                    <div class="stat-item">
+                                        <div class="stat-header">
+                                            <span class="stat-dot presencial"></span>
+                                            <span class="stat-number">70 %</span>
+                                        </div>
+                                        <span class="stat-label">Presencial</span>
+                                        <span class="stat-sublabel">Encuentro pedagógico y prácticas</span>
+                                    </div>
+
+                                    <div class="stat-item">
+                                        <div class="stat-header">
+                                            <span class="stat-dot virtual"></span>
+                                            <span class="stat-number">30 %</span>
+                                        </div>
+                                        <span class="stat-label">Virtual</span>
+                                        <span class="stat-sublabel">Aulas activas sincrónicas y asincrónicas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Barra horizontal de distribución complementaria -->
+                            <div class="dist-bar-wrapper" aria-hidden="true">
+                                <div class="dist-presencial" title="70% Presencial"></div>
+                                <div class="dist-virtual" title="30% Virtual"></div>
+                            </div>
+
+                            <div class="hero-card-footer">
+                                <div class="hero-card-footer-text">Promedio institucional de carga horaria anual</div>
+                                <div class="hero-card-footer-sub">Articulación pedagógica integral en cada carrera</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 1: PRESENTACIÓN Y FUNDAMENTACIÓN
+           ========================================================================== -->
+        <section class="fundamentacion-section" id="fundamentacion">
+            <div class="container">
+                <h2>Presentación y fundamentación</h2>
+                <p class="section-desc">Una propuesta institucional para que presencialidad y virtualidad formen parte de una misma experiencia de aprendizaje.</p>
+
+                <div class="fundamentacion-grid">
+                    <div class="lead-text-box">
+                        <p>
+                            El Instituto Leibnitz reconoce la heterogeneidad de las trayectorias de sus estudiantes, particularmente la compatibilización entre estudio, trabajo, responsabilidades familiares, tiempos de traslado y experiencias previas con tecnologías. La modalidad combinada permite ampliar las oportunidades de participación y sostener la continuidad pedagógica cuando la integración entre escenarios responde a decisiones curriculares explícitas y compartidas.
+                        </p>
+                    </div>
+                    <div class="lead-text-box">
+                        <p>
+                            La virtualidad no constituye un repositorio de materiales ni una mera sustitución de la presencialidad. Es un escenario de enseñanza con mediación docente, diseño específico, interacción, retroalimentación y producción de evidencias de aprendizaje.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Fila de 4 tarjetas con iconos lineales -->
+                <div class="principios-grid">
+                    <article class="principio-card">
+                        <div class="principio-icon-wrapper" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="principio-title">Trayectorias diversas</h3>
+                        <p class="principio-desc">Acompañamiento atento a realidades singulares, compatibilidad laboral-familiar y sostenimiento de la continuidad académica.</p>
+                    </article>
+
+                    <article class="principio-card">
+                        <div class="principio-icon-wrapper" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="principio-title">Autonomía progresiva</h3>
+                        <p class="principio-desc">Fortalecimiento gradual de la autorregulación, la organización autónoma de los tiempos de estudio y la metacognición.</p>
+                    </article>
+
+                    <article class="principio-card">
+                        <div class="principio-icon-wrapper" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="principio-title">Aprendizaje colaborativo</h3>
+                        <p class="principio-desc">Espacios de co-construcción, debate guiado y producción colectiva tanto en aulas físicas como en entornos digitales.</p>
+                    </article>
+
+                    <article class="principio-card">
+                        <div class="principio-icon-wrapper" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="principio-title">Ciudadanía y cultura digital</h3>
+                        <p class="principio-desc">Apropiación ética, crítica y reflexiva de las tecnologías y plataformas digitales en la formación profesional.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 2: ORGANIZACIÓN DE LOS ESCENARIOS
+           ========================================================================== -->
+        <section class="organizacion-section" id="organizacion">
+            <div class="container">
+                <h2>Una modalidad, tres escenarios articulados</h2>
+                <p class="section-desc">Cada actividad debe indicar su modalidad, propósito y vínculo con el recorrido de aprendizaje.</p>
+
+                <!-- Acuerdo institucional destacado -->
+                <div class="acuerdo-banner">
+                    <div class="acuerdo-content">
+                        <span class="acuerdo-tag">Acuerdo Institucional Marco</span>
+                        <div class="acuerdo-text">
+                            La carga horaria anual se organiza en un promedio de 70 % de presencialidad y 30 % de virtualidad.
+                        </div>
+                    </div>
+                    <div class="acuerdo-badge-pill">Distribución Proporcional 2026</div>
+                </div>
+
+                <!-- Grilla de los tres escenarios -->
+                <div class="escenarios-grid">
+                    <article class="escenario-card">
+                        <div class="escenario-top">
+                            <span class="escenario-badge">Escenario 01</span>
+                            <div class="escenario-icon-wrapper" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="escenario-title">Presencial</h3>
+                        <p class="escenario-desc">
+                            Favorece el encuentro pedagógico, prácticas, talleres, laboratorios, instancias de integración, acompañamiento inicial, evaluación cuando corresponda y construcción de vínculos.
+                        </p>
+                    </article>
+
+                    <article class="escenario-card">
+                        <div class="escenario-top">
+                            <span class="escenario-badge">Escenario 02</span>
+                            <div class="escenario-icon-wrapper" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="escenario-title">Virtual sincrónico</h3>
+                        <p class="escenario-desc">
+                            Se utiliza para intercambios en tiempo real que requieren diálogo, orientación, devolución, exposición, debate o trabajo colaborativo. Se informa con anticipación en el calendario.
+                        </p>
+                    </article>
+
+                    <article class="escenario-card">
+                        <div class="escenario-top">
+                            <span class="escenario-badge">Escenario 03</span>
+                            <div class="escenario-icon-wrapper" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="escenario-title">Virtual asincrónico</h3>
+                        <p class="escenario-desc">
+                            Incluye clases, recursos, foros, actividades, producciones y devoluciones con plazos claros. Requiere consignas mediadas, presencia docente y criterios explícitos de participación.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- Nota visual breve -->
+                <div class="nota-alternancia">
+                    <div class="nota-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="nota-text">
+                        La alternancia no es automática: responde al sentido pedagógico de cada propuesta.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 3: AULA VIRTUAL LEIBNITZ
+           ========================================================================== -->
+        <section class="aula-section" id="aulas-virtuales">
+            <div class="container">
+                <h2>Un aula virtual activa, clara y accesible</h2>
+                <p class="section-desc">El aula digital como extensión natural y estructurada del espacio formativo institucional.</p>
+
+                <div class="aula-intro-box">
+                    <div class="aula-intro-text">
+                        <p>
+                            La plataforma virtual oficial es el <strong>Aula Virtual Leibnitz de la Red de Nodos de Institutos Superiores</strong>. Toda actividad pedagógica virtual, comunicación académica, publicación de materiales, entrega de producciones y devolución docente se centraliza prioritariamente en este entorno.
+                        </p>
+                    </div>
+                    <div class="aula-action-side">
+                        <a href="https://leibnitz-cba.infd.edu.ar/aula/acceso.cgi" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <span>Ingresar al Aula Virtual</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <div class="nodo-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                            <span>Red de Nodos INFD - Córdoba</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estructura de aula virtual (6 módulos) -->
+                <div class="modulos-grid">
+                    <article class="modulo-card">
+                        <div class="modulo-header">
+                            <span class="modulo-number">01</span>
+                            <div class="modulo-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </div>
+                        </div>
+                        <h3 class="modulo-title">Presentación</h3>
+                        <p class="modulo-desc">Docente responsable, propósito formativo, formas de comunicación y condiciones de participación.</p>
+                    </article>
+
+                    <article class="modulo-card">
+                        <div class="modulo-header">
+                            <span class="modulo-number">02</span>
+                            <div class="modulo-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            </div>
+                        </div>
+                        <h3 class="modulo-title">Documentación</h3>
+                        <p class="modulo-desc">Programa, planificación analítica, cronograma detallado, criterios de evaluación y bibliografía obligatoria.</p>
+                    </article>
+
+                    <article class="modulo-card">
+                        <div class="modulo-header">
+                            <span class="modulo-number">03</span>
+                            <div class="modulo-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                            </div>
+                        </div>
+                        <h3 class="modulo-title">Hoja de ruta</h3>
+                        <p class="modulo-desc">Tema, actividad, modalidad de trabajo, recursos necesarios, fecha límite, producto esperado y devolución.</p>
+                    </article>
+
+                    <article class="modulo-card">
+                        <div class="modulo-header">
+                            <span class="modulo-number">04</span>
+                            <div class="modulo-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                        </div>
+                        <h3 class="modulo-title">Desarrollo</h3>
+                        <p class="modulo-desc">Materiales de cátedra, actividades mediadas, guías de estudio y espacios de consulta e intercambio grupal.</p>
+                    </article>
+
+                    <article class="modulo-card">
+                        <div class="modulo-header">
+                            <span class="modulo-number">05</span>
+                            <div class="modulo-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            </div>
+                        </div>
+                        <h3 class="modulo-title">Evaluación</h3>
+                        <p class="modulo-desc">Consignas explícitas, criterios evaluativos, rúbricas de desempeño, plazos de entrega, evidencias y retroalimentación.</p>
+                    </article>
+
+                    <article class="modulo-card">
+                        <div class="modulo-header">
+                            <span class="modulo-number">06</span>
+                            <div class="modulo-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="modulo-title">Comunicación</h3>
+                        <p class="modulo-desc">Novedades académicas, foros de avisos y canales institucionales definidos para una interacción fluida.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 4: ACUERDOS PARA LA PLANIFICACIÓN DOCENTE
+           ========================================================================== -->
+        <section class="planificacion-section" id="planificacion">
+            <div class="container">
+                <h2>Acuerdos para cada unidad curricular</h2>
+                <p class="section-desc">Criterios pedagógicos compartidos para garantizar articulación, claridad y previsibilidad en toda la propuesta formativa.</p>
+
+                <div class="planificacion-grid">
+                    <!-- Lista con check naranja -->
+                    <ul class="acuerdos-list">
+                        <li class="acuerdo-item">
+                            <span class="check-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span class="acuerdo-item-text">
+                                <strong>Hoja de ruta</strong> que integre con claridad los escenarios de enseñanza, aprendizaje y evaluación.
+                            </span>
+                        </li>
+
+                        <li class="acuerdo-item">
+                            <span class="check-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span class="acuerdo-item-text">
+                                <strong>Calendario de actividades</strong> con especificación previa de fechas y modalidad concreta de cada clase.
+                            </span>
+                        </li>
+
+                        <li class="acuerdo-item">
+                            <span class="check-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span class="acuerdo-item-text">
+                                <strong>Especificación precisa</strong> de temas, recursos pedagógicos, consignas y producciones requeridas en cada escenario.
+                            </span>
+                        </li>
+
+                        <li class="acuerdo-item">
+                            <span class="check-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span class="acuerdo-item-text">
+                                <strong>Proceso sistemático</strong> de evaluación formativa continua y pautas transparentes de acreditación.
+                            </span>
+                        </li>
+
+                        <li class="acuerdo-item">
+                            <span class="check-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span class="acuerdo-item-text">
+                                <strong>Estrategias planificadas</strong> de retroalimentación constructiva, instancias de recuperación y acompañamiento a las trayectorias.
+                            </span>
+                        </li>
+
+                        <li class="acuerdo-item">
+                            <span class="check-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span class="acuerdo-item-text">
+                                <strong>Actividades orientadas</strong> al desarrollo efectivo de capacidades profesionales específicas del perfil de egreso de cada carrera.
+                            </span>
+                        </li>
+                    </ul>
+
+                    <!-- Tarjeta lateral destacada -->
+                    <aside class="anticipar-card">
+                        <span class="anticipar-tag">Principio Orientador</span>
+                        <h3 class="anticipar-title">Planificar es anticipar el recorrido</h3>
+                        <p class="anticipar-desc">
+                            Las propuestas combinadas deben permitir que cada estudiante sepa qué aprenderá, cómo participará, qué deberá producir, cuándo deberá hacerlo y cómo recibirá devoluciones.
+                        </p>
+                        <ul class="anticipar-puntos">
+                            <li>Previsibilidad en tiempos y entregas</li>
+                            <li>Coherencia entre objetivos y consignas</li>
+                            <li>Claridad en criterios e instrumentos de evaluación</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 5: EVALUACIÓN FORMATIVA Y ACREDITACIÓN
+           ========================================================================== -->
+        <section class="evaluacion-section" id="evaluacion">
+            <div class="container">
+                <h2>Evaluar para acompañar el aprendizaje</h2>
+                <div class="evaluacion-intro-text">
+                    La evaluación es continua, formativa, criterial y coherente con las propuestas de enseñanza. Se desarrolla en los distintos escenarios de la modalidad combinada y permite recuperar evidencias de proceso y de producto.
+                </div>
+
+                <div class="evaluacion-cards-grid">
+                    <article class="evaluacion-card">
+                        <div class="evaluacion-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        </div>
+                        <h3 class="evaluacion-card-title">Variedad de dispositivos</h3>
+                        <p class="evaluacion-card-desc">Producciones auténticas, proyectos integradores, portafolios de evidencias, foros analíticos, exposiciones orales, prácticas de campo y coloquios.</p>
+                    </article>
+
+                    <article class="evaluacion-card">
+                        <div class="evaluacion-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                        </div>
+                        <h3 class="evaluacion-card-title">Trazabilidad</h3>
+                        <p class="evaluacion-card-desc">Consignas explícitas, matrices y rúbricas de evaluación, plazos estipulados y devoluciones pedagógicas documentadas en el aula virtual.</p>
+                    </article>
+
+                    <article class="evaluacion-card">
+                        <div class="evaluacion-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </div>
+                        <h3 class="evaluacion-card-title">Retroalimentación</h3>
+                        <p class="evaluacion-card-desc">Devoluciones oportunas en el tiempo, comprensibles en su fundamentación y orientadas a la mejora cualitativa del proceso de aprendizaje.</p>
+                    </article>
+
+                    <article class="evaluacion-card">
+                        <div class="evaluacion-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="evaluacion-card-title">Inclusión</h3>
+                        <p class="evaluacion-card-desc">Alternativas pedagógicas y técnicas razonables ante contingencias de conectividad, requerimientos de accesibilidad o situaciones singulares justificadas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 6: CICLO PROPEDÉUTICO (BANNER OSCURO HERO STYLE)
+           ========================================================================== -->
+        <section class="propedéutico-section" id="ingreso">
+            <div class="container">
+                <div class="propedéutico-banner">
+                    <div class="propedéutico-banner-pattern"></div>
+                    <div class="propedéutico-header">
+                        <span class="propedéutico-tag">Ingreso y Acompañamiento Inicial</span>
+                        <h2>Ingresar también es aprender a habitar el Nivel Superior</h2>
+                        <p class="propedéutico-bajada">
+                            El PIMC incluye el ciclo propedéutico: Seminario de ingreso a la educación superior.
+                        </p>
+                    </div>
+
+                    <div class="propedéutico-cards-grid">
+                        <article class="propedéutico-card">
+                            <div class="propedéutico-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            </div>
+                            <h3 class="propedéutico-card-title">Inserción institucional</h3>
+                            <p class="propedéutico-card-desc">Autoridades institucionales, perfiles de carreras, Régimen Académico Institucional (RAI), calendario anual, servicios estudiantiles, derechos y responsabilidades.</p>
+                        </article>
+
+                        <article class="propedéutico-card">
+                            <div class="propedéutico-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <h3 class="propedéutico-card-title">Alfabetización digital</h3>
+                            <p class="propedéutico-card-desc">Acceso y navegación del aula virtual, participación en foros, formatos de entrega, consulta de devoluciones, cuidado de datos y ciudadanía digital responsable.</p>
+                        </article>
+
+                        <article class="propedéutico-card">
+                            <div class="propedéutico-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            </div>
+                            <h3 class="propedéutico-card-title">Aprender a estudiar</h3>
+                            <p class="propedéutico-card-desc">Técnicas de lectura académica, organización estratégica del tiempo, comprensión de consignas complejas, escritura académica y dinámicas de trabajo colaborativo.</p>
+                        </article>
+
+                        <article class="propedéutico-card">
+                            <div class="propedéutico-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                            </div>
+                            <h3 class="propedéutico-card-title">Relevamiento y seguimiento</h3>
+                            <p class="propedéutico-card-desc">Diagnóstico inicial de conectividad, disponibilidad de dispositivos tecnológicos, experiencias previas y detección temprana de necesidades específicas de acompañamiento.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 7: CORRESPONSABILIDAD
+           ========================================================================== -->
+        <section class="corresponsabilidad-section" id="corresponsabilidad">
+            <div class="container">
+                <h2>La modalidad combinada es una construcción compartida</h2>
+                <p class="section-desc">El sostenimiento de propuestas formativas de calidad requiere del compromiso articulado de toda la comunidad institucional.</p>
+
+                <div class="roles-grid">
+                    <article class="rol-card">
+                        <div class="rol-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                        </div>
+                        <h3 class="rol-title">Equipo directivo</h3>
+                        <p class="rol-desc">Conduce la implementación institucional, gestiona recursos tecnológicos y edilicios, monitorea indicadores de avance y convoca a la actualización anual del PIMC.</p>
+                    </article>
+
+                    <article class="rol-card">
+                        <div class="rol-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <h3 class="rol-title">Coordinación de enseñanza superior</h3>
+                        <p class="rol-desc">Acompaña las planificaciones docentes, articula cronogramas y calendarios, orienta el uso pedagógico del aula virtual y promueve el seguimiento cercano de trayectorias.</p>
+                    </article>
+
+                    <article class="rol-card">
+                        <div class="rol-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        </div>
+                        <h3 class="rol-title">Docentes</h3>
+                        <p class="rol-desc">Diseñan propuestas formativas integradas, sostienen una presencia pedagógica activa en las aulas presenciales y virtuales, evalúan formativamente y brindan devoluciones oportunas.</p>
+                    </article>
+
+                    <article class="rol-card">
+                        <div class="rol-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3 class="rol-title">Preceptoría y personal de apoyo</h3>
+                        <p class="rol-desc">Colaboran activamente con la comunicación institucional, el registro y seguimiento de participación de los estudiantes y la orientación ante gestiones académicas.</p>
+                    </article>
+
+                    <article class="rol-card">
+                        <div class="rol-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                        </div>
+                        <h3 class="rol-title">Estudiantes</h3>
+                        <p class="rol-desc">Participan activamente en ambos escenarios, consultan periódicamente calendarios y aulas virtuales, cumplen los acuerdos de convivencia y solicitan orientación cuando lo necesitan.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN 8: SEGUIMIENTO Y ACTUALIZACIÓN ANUAL
+           ========================================================================== -->
+        <section class="seguimiento-section" id="seguimiento">
+            <div class="container">
+                <h2>Evaluar, aprender y actualizar</h2>
+                <div class="seguimiento-intro-text">
+                    El PIMC se revisa anualmente a partir de evidencias de implementación, normativas vigentes, necesidades de las carreras y propuestas de mejora construidas colectivamente.
+                </div>
+
+                <!-- Línea de tiempo visual -->
+                <div class="timeline" role="region" aria-label="Línea de tiempo de seguimiento institucional">
+                    <div class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true">01</div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">Febrero y Marzo</div>
+                            <p class="timeline-desc">Actualización anual del PIMC, socialización de acuerdos pedagógicos, configuración inicial de aulas virtuales y desarrollo del Ciclo Propedéutico.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true">02</div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">Inicio de cada cuatrimestre</div>
+                            <p class="timeline-desc">Revisión colegiada de calendarios académicos, verificación de hojas de ruta por espacio curricular y control de condiciones de acceso para todos los estudiantes.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true">03</div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">Durante la cursada</div>
+                            <p class="timeline-desc">Seguimiento activo del funcionamiento de aulas virtuales, participación estudiantil, desarrollo de la evaluación formativa y acompañamiento de trayectorias en riesgo.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true">04</div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">Cierre de cada cuatrimestre</div>
+                            <p class="timeline-desc">Reunión de balance y evaluación de resultados, identificación de dificultades emergentes y aplicación de ajustes inmediatos para el período siguiente.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true">05</div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">Diciembre</div>
+                            <p class="timeline-desc">Elaboración del informe institucional consolidado de evaluación de la modalidad combinada y proyección de metas y actualizaciones para el ciclo lectivo subsiguiente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grilla de indicadores -->
+                <div class="indicadores-block">
+                    <div class="indicadores-header">
+                        <h3>Grilla de Indicadores para la Mejora</h3>
+                        <p>Ejes prioritarios para la recolección de evidencias y toma de decisiones pedagógicas informadas.</p>
+                    </div>
+
+                    <div class="indicadores-grid">
+                        <div class="indicador-card">
+                            <div class="indicador-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                            </div>
+                            <div class="indicador-title">Acceso y participación</div>
+                        </div>
+
+                        <div class="indicador-card">
+                            <div class="indicador-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            </div>
+                            <div class="indicador-title">Enseñanza</div>
+                        </div>
+
+                        <div class="indicador-card">
+                            <div class="indicador-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                            </div>
+                            <div class="indicador-title">Aprendizajes y trayectorias</div>
+                        </div>
+
+                        <div class="indicador-card">
+                            <div class="indicador-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <div class="indicador-title">Percepciones de docentes y estudiantes</div>
+                        </div>
+
+                        <div class="indicador-card">
+                            <div class="indicador-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            </div>
+                            <div class="indicador-title">Mejoras implementadas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN FINAL: RECURSOS
+           ========================================================================== -->
+        <section class="recursos-section" id="recursos">
+            <div class="container">
+                <h2>Documentación y recursos institucionales</h2>
+                <p class="section-desc">Acceso directo a los documentos normativos, la plataforma virtual de estudio y los marcos orientadores provinciales.</p>
+
+                <div class="recursos-grid">
+                    <article class="recurso-card">
+                        <div class="recurso-card-body">
+                            <span class="recurso-badge">Documento Oficial</span>
+                            <h3 class="recurso-title">Proyecto Institucional de Modalidad Combinada 2026</h3>
+                            <p class="recurso-desc">Documento institucional aprobado con el marco pedagógico, acuerdos de cursada, distribución de carga horaria y pautas evaluativas del ciclo 2026.</p>
+                        </div>
+                        <button class="btn btn-card" id="btn-download-pimc" aria-label="Descargar documento del PIMC 2026">
+                            <span>Descargar documento</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </button>
+                    </article>
+
+                    <article class="recurso-card">
+                        <div class="recurso-card-body">
+                            <span class="recurso-badge">Entorno Digital</span>
+                            <h3 class="recurso-title">Aula Virtual Leibnitz</h3>
+                            <p class="recurso-desc">Acceso directo al campus virtual oficial de la Red de Nodos de Institutos Superiores para docentes y estudiantes de todas las carreras.</p>
+                        </div>
+                        <a href="https://leibnitz-cba.infd.edu.ar/aula/acceso.cgi" target="_blank" rel="noopener noreferrer" class="btn btn-card" aria-label="Ingresar al campus virtual oficial">
+                            <span>Ingresar al campus</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </article>
+
+                    <article class="recurso-card">
+                        <div class="recurso-card-body">
+                            <span class="recurso-badge">Marco Provincial</span>
+                            <h3 class="recurso-title">Orientaciones DGES para Modalidad Combinada</h3>
+                            <p class="recurso-desc">Documento técnico de la Dirección General de Educación Superior (DGES Córdoba) que establece los lineamientos para la educación combinada.</p>
+                        </div>
+                        <a href="https://dges-cba.infd.edu.ar/sitio/wp-content/uploads/2025/05/Documento-MC_v2_241223_174248.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-card" aria-label="Consultar documento de orientaciones DGES">
+                            <span>Consultar orientaciones</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Notificación emergente al hacer clic en descarga de documento placeholder -->
+    <div id="toast-doc" class="toast-notification" role="status" aria-live="polite">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <div>
+            <strong>Documento PIMC 2026</strong><br>
+            <span style="font-size: 0.88rem; color: #cbd5e1;">El archivo PDF oficial se vinculará aquí al publicarse su versión definitiva.</span>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================================================== -->
+    <footer>
+        <div class="nav-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-box">
+                        <!-- SVG Logo Cultura LBZ -->
+                        <svg class="logo-icon" viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <text x="5" y="32" 
+                                  font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                                  font-size="32" 
+                                  font-weight="600" 
+                                  font-style="italic" 
+                                  fill="none" 
+                                  stroke="#ffffff" 
+                                  stroke-width="2.2"
+                                  letter-spacing="0.5">Cultura</text>
+                            <text x="5" y="78" 
+                                  font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+                                  font-size="52" 
+                                  font-weight="900" 
+                                  font-style="italic" 
+                                  fill="none" 
+                                  stroke="var(--accent)" 
+                                  stroke-width="3"
+                                  letter-spacing="1">LBZ</text>
+                        </svg>
+                        <div class="logo-text">
+                            <span class="footer-logo-title">Instituto Leibnitz</span>
+                            <span class="footer-logo-sub">Cerca tuyo. En serio.</span>
+                        </div>
+                    </div>
+                    <div class="footer-location">
+                        Nivel Superior | Villa María, Córdoba
+                    </div>
+                    <blockquote class="footer-quote">
+                        “Trayectorias cuidadas en escenarios presenciales y virtuales integrados”
+                    </blockquote>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-links-title">Navegación del PIMC</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#inicio">Inicio / Portada</a></li>
+                        <li><a href="#fundamentacion">Fundamentación</a></li>
+                        <li><a href="#organizacion">Organización</a></li>
+                        <li><a href="#aulas-virtuales">Aulas virtuales</a></li>
+                        <li><a href="#planificacion">Planificación docente</a></li>
+                        <li><a href="#evaluacion">Evaluación formativa</a></li>
+                        <li><a href="#ingreso">Ciclo propedéutico</a></li>
+                        <li><a href="#seguimiento">Seguimiento y actualización</a></li>
+                        <li><a href="#recursos">Recursos y descargas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="width: 100%;">
+                <div class="footer-copy">
+                    &copy; 2026 Instituto Leibnitz | Nivel Superior. Villa María, Córdoba.
+                </div>
+                <div class="footer-motto-final">
+                    “La mejora continua es una construcción y responsabilidad compartida.”
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       SCRIPTS (Comportamientos Interactivos del Cliente)
+       ========================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const header = document.getElementById('header');
+            const downloadBtn = document.getElementById('btn-download-pimc');
+            const toast = document.getElementById('toast-doc');
+
+            // 1. Menú Móvil Hamburguesa
+            if (mobileMenuBtn && navMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isOpen = mobileMenuBtn.classList.toggle('open');
+                    navMenu.classList.toggle('open');
+                    mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+
+                // Cerrar menú al hacer click en un enlace
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenuBtn.classList.remove('open');
+                        navMenu.classList.remove('open');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // 2. Encogimiento sutil del header al hacer scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    header.style.height = '70px';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 4px 14px rgba(9, 17, 36, 0.08)';
+                } else {
+                    header.style.height = '80px';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.96)';
+                    header.style.boxShadow = '0 2px 4px rgba(9, 17, 36, 0.04)';
+                }
+            }, { passive: true });
+
+            // 3. Scrollspy activo según la posición de la página
+            const sections = document.querySelectorAll('section[id]');
+            function activeNavOnScroll() {
+                const scrollY = window.pageYOffset;
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - 110;
+                    const sectionId = current.getAttribute('id');
+                    const link = document.querySelector(`.nav-menu a[href*="#${sectionId}"]`);
+                    
+                    if (link) {
+                        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    }
+                });
+            }
+            window.addEventListener('scroll', activeNavOnScroll, { passive: true });
+
+            // 4. Toast para botón de descarga placeholder
+            if (downloadBtn && toast) {
+                let toastTimer = null;
+                downloadBtn.addEventListener('click', () => {
+                    toast.classList.add('show');
+                    if (toastTimer) clearTimeout(toastTimer);
+                    toastTimer = setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 4000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
